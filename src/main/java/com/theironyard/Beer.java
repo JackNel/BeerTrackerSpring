@@ -3,6 +3,7 @@ package com.theironyard;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 /**
  * Created by Jack on 11/10/15.
@@ -16,5 +17,6 @@ public class Beer {
     String name;
     String type;
     Integer calories;
-
+    @ManyToOne
+    User user;
 }
