@@ -15,4 +15,6 @@ public class Beer {
 
     String name;
     String type;
+    Integer calories;
+
 }

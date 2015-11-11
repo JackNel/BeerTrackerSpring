@@ -5,7 +5,22 @@
     <title>Beer Tracker</title>
 </head>
 <body>
-<form action="add=beer" method="post">
+
+<a href="/">All</a>
+<a href="/?type=Ale">Ales</a>
+<a href="/?type=Lager">Lagers</a>
+<a href="/?type=Pilsner">Pilsners</a>
+<a href="/?type=Stout">Stouts</a>
+<a href="/?type=Other">Other</a>
+
+<br><br>
+
+<form action="/" method="get">
+    <input type="text" placeholder="Search" name="search"/>
+    <button type="submit">Search</button>
+</form>
+
+<form action="add-beer" method="post">
     <input type="text" placeholder="Beer Name" name="beername"/>
     <select name="beertype">
         <option value="Ale">Ale</option>
@@ -14,11 +29,12 @@
         <option value="Stout">Stout</option>
         <option value="Other">Other</option>
     </select>
+    <input type="number" placeholder="Calories" name="beercalories"/>
     <button type="submit">Submit</button>
 </form>
 <br>
 {{#beers}}
-{{id}}. {{name}} - {{type}}<br>
+{{name}} - {{type}} - {{calories}} cal.<br>
 {{/beers}}
 </body>
 </html>
